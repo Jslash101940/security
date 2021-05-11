@@ -1,0 +1,415 @@
+main .popup {
+    position: fixed;
+    width: 600px;
+    height: 400px;
+    top: calc(50vh - 400px / 2);
+    left: calc(50vw - 600px / 2);
+    background-color: var(--black);
+    border: solid 3px var(--white);
+    padding: 30px 20px;
+    display: none;
+}
+
+main .popup .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+main .popup img {
+    width: 125px;
+    height: 125px;
+}
+
+main .popup h3 {
+    font-size: 100px;
+    letter-spacing: 0.125rem;
+    line-height: 10rem;
+    color: var(--red);
+    text-decoration: underline;
+}
+
+main .popup p {
+    font-size: 30px;
+    color: var(--grey);
+    padding: 0 50px;
+}
+
+main article {
+    background-color: var(--white);
+    padding: 50px 100px;
+    min-height: calc(100vh - 50px);
+}
+
+h3 {
+    color: var(--black);
+}
+
+/* job desc */
+
+.job-desc {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.job-desc .images img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.job-desc .display-image img {
+    width: 250px;
+    height: 250px;
+    border: solid var(--red) 5px;
+    margin: 10px 0;
+}
+
+.job-desc .clickable-images {
+    display: flex;
+    gap: 5px;
+}
+
+.job-desc .clickable-images img {
+    width: calc(250px / 6 - 5px);
+    height: calc(250px / 6 - 5px);
+    border: solid var(--red) 2.5px;
+}
+
+.job-desc h4 {
+    text-align: center;
+    font-size: 25px;
+    color: var(--black);
+}
+
+.job-desc h3 {
+    font-size: 100px;
+    margin-bottom: -35px;
+}
+
+.job-desc .title p {
+    color: var(--grey);
+    font-size: 30px
+}
+
+/* reqr */
+
+.reqr h3 {
+    font-size: 50px;
+    line-height: 3rem;
+}
+
+.reqr ul {
+    list-style: circle;
+    padding-left: 40px;
+}
+
+.reqr ul li {
+    font-size: 25px;
+    color: var(--grey);
+}
+
+/* form */
+
+.bottom {
+    display: flex;
+    gap: 100px;
+}
+
+.form h3 {
+    font-size: 50px;
+    line-height: 3rem;
+}
+
+.form label {
+    font-size: 25px;
+    width: 75px;
+    color: var(--grey);
+}
+
+.form .user-info {
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form .user-info .side-by-side {
+    display: flex;
+    align-items: center;
+}
+
+.form .user-info input {
+    width: 200px;
+    height: 25px;
+    margin: 0 20px;
+}
+
+.form form {
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+}
+
+.form form fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resume img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.resume input {
+    outline: none;
+}
+
+.submit-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.submit-button div {
+    width: 200px;
+    height: 50px;
+    outline: none;
+    font-size: 20px;
+    background-color: var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--normal-text-font);
+    border: solid 2px var(--black);
+    animation: unsheen .5s;
+    animation-fill-mode: forwards;
+}
+
+.submit-button div:hover {
+    animation: sheen .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes unsheen {
+    from {
+        background: linear-gradient(130deg, var(--red), var(--white), var(--red) 20%)
+    } to {
+        background-color: var(--red);
+    }
+}
+
+@keyframes sheen {
+    to {
+        background: linear-gradient(130deg, var(--red), var(--white), var(--red) 20%)
+    }
+}
+
+#sub1 {
+    display: none;
+}
+
+#res1 {
+    display: none;
+}
+
+@media (max-width: 1573px) {
+    .job-desc-text {
+        display: none;
+    }
+
+    .job-desc h3 {
+        font-size: 100px;
+        margin-top: -100px;
+    }
+}
+
+@media (max-width: 1350px) {
+    #sub1 {
+        margin-top: 70px;
+        display: block;
+    }
+
+    #sub2 {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .bottom {
+        width: 700px;
+    }
+
+    #res2 {
+        display: none;
+    }
+
+    #res1 {
+        display: block;
+        display: flex;
+        margin-top: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1020px) {
+    #job-title {
+        display: none
+    }
+
+    #display-image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .top {
+        width: 300px;
+        margin: 0 150px;
+    }
+
+    .job-desc .clickable-images img {
+        width: calc(300px / 6 - 5px);
+        height: calc(300px / 6 - 5px);
+        border: solid var(--red) 2.5px;
+    }
+}
+
+@media (max-width: 802px) {
+    .images {
+        display: flex;
+        flex-direction: column;
+        margin-right: -50px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .top {
+        margin: 0;
+        width: 100%;
+    }
+
+    .bottom {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form .user-info {
+        text-align: left;
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    .form .side-by-side {
+        padding-left: 20px;
+    }
+
+    .form #res1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    main .popup {
+        width: 450px;
+        height: 300px;
+        top: calc(50vh - 300px / 2);
+        left: calc(50vw - 450px / 2);
+        padding: 20px 10px;
+    }
+    
+    main .popup .title {
+        margin-bottom: 0;
+    }
+    
+    main .popup img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    main .popup h3 {
+        font-size: 65px;
+        line-height: 8rem;
+    }
+    
+    main .popup p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 444px) {
+    main article {
+        padding: 20px;
+    }
+
+    .bottom {
+        gap: 40px;
+    }
+    
+    #display-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .job-desc .clickable-images img {
+        width: calc(250px / 6 - 5px);
+        height: calc(250px / 6 - 5px);
+    }
+
+    .form h3 {
+        font-size: 35px;
+        line-height: 3rem;
+    }
+
+    .reqr h3 {
+        font-size: 35px;
+        line-height: 3rem;
+    }
+
+    .form label {
+        font-size: 20px;
+        width: 45px;
+    }
+
+    .form .user-info input {
+        width: 150px;
+    }
+
+    .reqr ul li {
+        font-size: 20px;
+    }
+
+    main .popup {
+        width: 200px;
+        height: 175px;
+        top: calc(50vh - 175px / 2);
+        left: calc(50vw - 200px / 2);
+        padding: 10px 5px;
+    }
+    
+    main .popup img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    main .popup h3 {
+        font-size: 25px;
+        line-height: 4rem;
+    }
+    
+    main .popup p {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+}

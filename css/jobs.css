@@ -1,0 +1,81 @@
+main {
+    background-color: var(--white);
+}
+
+main article {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+main section {
+    width: 80vw;
+    min-height: 200px;
+    background-color: var(--black);
+    margin: 10px auto;
+    box-shadow: 5px 5px var(--red);
+    padding: 15px;
+    animation: unsheen .5s;
+    animation-fill-mode: forwards;
+}
+
+main section img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px var(--red) solid;
+}
+
+main section a {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+main section h3 {
+    font-size: 40px;
+    line-height: 2rem;
+    letter-spacing: .125rem;
+    color: var(--red);
+}
+
+main section p {
+    color: var(--grey);
+    font-size: 20px;
+}
+
+main section:hover {
+    animation: sheen .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes unsheen {
+    from {
+        background: linear-gradient(130deg, var(--black), var(--white), var(--black) 10%)
+    } to {
+        background-color: var(--black);
+    }
+}
+
+@keyframes sheen {
+    to {
+        background: linear-gradient(130deg, var(--black), var(--white), var(--black) 10%)
+    }
+}
+
+@media (max-width: 851px) {
+    main section img {
+        display: none;
+    }
+}
+
+@media (max-width: 300px) {
+    main section h3 {
+        font-size: 30px;
+    }
+    
+    main section p {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,332 @@
+/* Opening */
+.opening {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 10% 90%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-image: url("../images/resized-samurai-background.png");
+}
+
+.opening-info {
+    padding: 80px 50vw 80px 250px;
+}
+
+.opening-info h2 {
+    text-align: center;
+    font-size: 150px;
+    color: var(--red);
+    -webkit-text-stroke: .5px var(--black);
+    margin-bottom: -40px;
+}
+
+.opening-info h3 {
+    text-align: center;
+    font-size: 50px;
+    color: var(--black);
+    font-family: var(--section-font);
+    line-height: 3rem;
+}
+
+.opening-info p {
+    text-align: center;
+    padding: 10px 35px;
+    font-size: 20px;
+    color: var(--black);
+    font-family: var(--normal-text-font);
+}
+
+.opening-links {
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.opening-links a {
+    width: 150px;
+    height: 50px;
+    border: solid 3px var(--black);
+    background-color: var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: var(--section-font);
+    color: var(--black);
+    text-decoration: none;
+    animation: unsheen .5s;
+    animation-fill-mode: forwards;
+} 
+.opening-links a:hover {
+    animation: sheen .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes unsheen {
+    from {
+        background: linear-gradient(125deg, var(--red), var(--white), var(--red) 50%)
+    } to {
+        background-color: var(--red);
+    }
+}
+
+@keyframes sheen {
+    to {
+        background: linear-gradient(125deg, var(--red), var(--white), var(--red) 50%)
+    }
+}
+
+/* History */
+
+.history {
+    background-color: var(--black);
+    padding: 50px 100px;
+}
+
+.history h3 {
+    color: var(--white);
+    font-size: 100px;
+    line-height: 5rem;
+}
+
+.history p {
+    color: var(--white);
+    font-size: 30px;
+    padding: 0 30px;
+    text-align: justify
+}
+
+/* Core Values */
+.core-values {
+    background-color: var(--white);
+    padding: 50px 100px;
+    color: var(--black);
+}
+
+.core-values h3 {
+    font-size: 100px;
+    line-height: 5rem;
+    text-align: right;
+}
+
+.core-values h4 {
+    font-size: 50px;
+    color: var(--black);
+}
+
+.core-values p {
+    font-size: 30px;
+    margin-bottom: 50px;
+    padding: 0 40px;
+}
+
+.core-values .cv-left {
+    padding-right: 400px;
+}
+
+/* Medias */
+
+@media (max-width: 1450px) {
+    .opening-info p {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .opening {
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-image: url("../images/shrunk-samurai-background.png");
+        display: flex;
+    }
+    
+    .opening-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .opening-info {
+        padding: 30px;
+    }
+    
+    .opening-info h2 {
+        display: flex;
+        font-size: 125px;
+        color: var(--red);
+        -webkit-text-stroke: .5px var(--black);
+        margin-bottom: -40px;
+    }
+    
+    .opening-info h3 {
+        display: none;
+    }
+    
+    .opening-links {
+        display: none;
+    }
+
+    .core-values p {
+        font-size: 30px;
+        margin-bottom: 25px;
+        padding: 0 30px;
+    }
+    
+    .core-values .cv-left {
+        padding-right: 200px;
+    }
+}
+
+@media (max-width: 720px) {
+    .history {
+        background-color: var(--black);
+        padding: 50px;
+    }
+    
+    .history h3 {
+        color: var(--white);
+        font-size: 80px;
+        line-height: 5rem;
+    }
+    
+    .history p {
+        color: var(--white);
+        font-size: 25px;
+        padding: 0 30px;
+        text-align: justify
+    }
+
+    .core-values {
+        background-color: var(--white);
+        padding: 50px;
+        color: var(--black);
+    }
+    
+    .core-values h3 {
+        font-size: 80px;
+        line-height: 5rem;
+        text-align: right;
+    }
+    
+    .core-values h4 {
+        font-size: 40px;
+        color: var(--black);
+    }
+    
+    .core-values p {
+        font-size: 25px;
+        margin-bottom: 50px;
+        padding: 0 20px;
+    }
+    
+    .core-values .cv-left {
+        padding-right: 100px;
+    }
+}
+
+@media (max-width: 545px) {
+    .opening-info {
+        padding: 30px;
+    }
+    
+    .opening-info h2 {
+        font-size: 100px;
+    }
+
+    .opening {
+        height: calc(100vh - 70px);
+        object-position: 0% 50%;
+        background-image: url("../images/jesus-chirst-how-many-times-do-I-need-shrink-this.png");
+    }
+
+    .history {
+        padding: 25px;
+    }
+    
+    .history h3 {
+        font-size: 50px;
+        line-height: 4rem;
+    }
+    
+    .history p {
+        font-size: 20px;
+        padding: 0 25px;
+    }
+
+    .core-values {
+        padding: 25px;
+    }
+    
+    .core-values h3 {
+        font-size: 50px;
+        line-height: 4rem;
+    }
+    
+    .core-values h4 {
+        font-size: 30px;
+    }
+    
+    .core-values p {
+        font-size: 20px;
+        margin-bottom: 25px;
+        padding: 0 10px;
+    }
+    
+    .core-values .cv-left {
+        padding-right: 75px;
+    }
+}
+
+@media (max-width: 420px) {
+    .opening {
+        height: calc(100vh - 40px);
+    }
+}
+
+@media (max-width: 370px) {
+    .opening-info h2 {
+        font-size: 75px;
+    }
+
+    .history {
+        padding: 10px;
+    }
+    
+    .history h3 {
+        font-size: 30px;
+        line-height: 3rem;
+    }
+    
+    .history p {
+        font-size: 15px;
+        padding: 0 15px;
+    }
+
+    .core-values {
+        padding: 15px;
+    }
+    
+    .core-values h3 {
+        font-size: 30px;
+        line-height: 3rem;
+    }
+    
+    .core-values h4 {
+        font-size: 25px;
+    }
+    
+    .core-values p {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .core-values .cv-left {
+        padding-right: 50px;
+    }
+}
